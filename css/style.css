@@ -110,12 +110,32 @@ ul > li > a {
 .banner-img > img {
   max-width: 370px;
   object-fit: contain;
+  animation: bannerimg 2s 1 linear forwards;
+}
+@keyframes bannerimg{
+    from{
+    transform: translatex(300px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 .banner-text > h1 {
   font-size: 70px;
   color: var(--primary-color);
   margin-bottom: 69px;
   font-family: "David Libre", serif;
+  animation: heading 2s 1 linear forwards;
+}
+@keyframes heading {
+  from{
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .banner-text > p {
   max-width: 376px;
@@ -190,6 +210,15 @@ ul > li > a {
   position: absolute;
   bottom: 20px;
   left: -175px;
+  animation: bannerdish 500ms 1 linear forwards;
+}
+@keyframes bannerdish {
+  from{
+    transform: translateY(50px);
+  }
+  to{
+    transform: translateY(0);
+  }
 }
 .banner-left-bottom > img {
   max-width: 300px;
@@ -298,9 +327,6 @@ ul > li > a {
   justify-content: center;
   align-items: center;
 }
-.manu-card1 {
-  /* z-index: 99; */
-}
 .onion-img {
   position: absolute;
   bottom: -50px;
@@ -379,9 +405,19 @@ ul > li > a {
   max-width: 650px;
   min-height: 660px;
   object-fit: contain;
+  animation: weldish 1s 1 linear forwards;
+}
+@keyframes weldish{
+  from{
+    transform: translateX(-300px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 .welcome-section > div > div {
   align-items: center;
+  justify-content: center;
   padding-bottom: 200px;
 }
 .welcome-text > h2 {
@@ -401,16 +437,19 @@ ul > li > a {
   max-width: 190px;
   min-height: 125px;
   object-fit: contain;
+  animation: weldish 1s 1 linear forwards;
 }
 .leaf2 > img {
   max-width: 200px;
   min-height: 130px;
   object-fit: contain;
+  animation: weldish 1s 1 linear forwards;
 }
 .leaf1 > img {
   max-width: 90px;
   min-height: 185px;
   object-fit: contain;
+  animation: weldish 1s 1 linear forwards;
 }
 .welcome-img {
   position: relative;
@@ -485,6 +524,15 @@ ul > li > a {
   max-width: 500px;
   min-height: 695px;
   object-fit: contain;
+  animation: chef 1s 1 linear forwards;
+}
+@keyframes chef{
+  from{
+    transform: translateX(300px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 .chef-img {
   display: flex;
@@ -613,7 +661,7 @@ ul > li > a {
 .review-section {
   background: #f3f4f4;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 250px;
 }
 .swiper {
   width: 100%;
@@ -694,10 +742,10 @@ h4 {
   align-items: center;
 }
 .newsletter-box {
-  /* position: absolute;
-  top: calc(-400px / 2);
+  position: absolute;
+  bottom: calc(-400px / 2);
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%);
   width: 1150px;
   min-height: 400px;
   display: flex;
@@ -736,7 +784,7 @@ input {
 }
 
 /* Small Newsletter Section */
-.small-newsletter-section {
+.small-newsletter-box {
   display: none;
 }
 
@@ -746,7 +794,7 @@ input {
   justify-content: center;
 }
 .footer-section {
-  margin-top: 100px;
+  margin-top: 250px;
   position: relative;
 }
 .footer-hr-img {
@@ -857,18 +905,6 @@ input {
 }
 
 @media screen and (max-width: 1230px) {
-  /* Banner Section */
-  .banner-section {
-    margin-bottom: 100px;
-  }
-  .letter-img > img {
-    display: none;
-  }
-  .banner-img > img {
-    max-width: 350px;
-    object-fit: contain;
-  }
-
   /* Dish with price Section */
   .dish-price-section > div > div {
     row-gap: 100px;
@@ -898,6 +934,17 @@ input {
     background-color: rgba(212, 143, 39, 0.3);
     backdrop-filter: blur(10px);
     padding: 10px;
+    animation: dropdown 500ms forwards 1 linear;
+  }
+  @keyframes dropdown {
+   from{
+    transform: translateY(-30px);
+    opacity: 0;
+   }
+   to{
+    transform: translate(0);
+    opacity: 1;
+   }
   }
   .nav-logo {
     padding: 10px;
@@ -912,24 +959,8 @@ input {
   }
 
   /* Banner Section */
-  .small-banner-scr {
-    display: block;
-  }
-  .big-scr {
-    display: none;
-  }
-  .banner-section > div > div {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .banner-section {
-    margin-bottom: 80px;
-    min-height: 90vh;
-  }
-  .banner-img > .small-banner-scr {
-    display: block;
-    max-width: 1000px;
-    min-height: 600px;
+  .banner-img > img {
+    max-width: 350px;
     object-fit: contain;
   }
   .banner-text > h1 {
@@ -946,10 +977,7 @@ input {
     gap: 25px;
     margin-bottom: 50px;
   }
-  .banner-left-top,
-  .banner-left-bottom,
-  .banner-right-top,
-  .banner-right-bottom {
+  .letter-img {
     display: none;
   }
 
@@ -958,7 +986,7 @@ input {
     background-color: whitesmoke;
   }
   .welcome-img > img {
-    max-width: 450px;
+    max-width: 500px;
     min-height: 560px;
     object-fit: contain;
   }
@@ -1009,6 +1037,10 @@ input {
     min-height: 220px;
     object-fit: contain;
   }
+  .col-6th,
+  .col-4th {
+    width: 50%;
+  }
 
   /* Our Chef Section */
   .chef-section {
@@ -1047,11 +1079,6 @@ input {
     min-height: 550px;
   }
 
-  /* Slider Section */
-  .review-section {
-    padding-bottom: 10px;
-  }
-
   /* Newsletter Section */
   .newsletter-box {
     width: 950px;
@@ -1069,6 +1096,43 @@ input {
   .footer-last-section > div > div {
     padding: 10px;
     gap: 300px;
+  }
+}
+@media screen and (max-width: 930px) {
+  /* Banner Section */
+  .small-banner-scr {
+    display: block;
+  }
+  .big-scr {
+    display: none;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .banner-section > div > div {
+    flex-direction: column-reverse;
+  }
+  .banner-section {
+    margin-bottom: 80px;
+    min-height: 90vh;
+  }
+  .banner-left-top,
+  .banner-left-bottom,
+  .banner-right-top,
+  .banner-right-bottom {
+    display: none;
+  }
+  .banner-img > .small-banner-scr {
+    display: block;
+    max-width: 1000px;
+    min-height: 600px;
+    object-fit: contain;
+  }
+
+  /* Welcome Section */
+  .col-6th,
+  .col-4th {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1246,6 +1310,9 @@ input {
     height: 89px;
     width: 89px;
   }
+  .review-section {
+    padding-bottom: 150px;
+  }
 
   /* Newsletter Section */
   .newsletter-box {
@@ -1267,7 +1334,7 @@ input {
     padding: 10px;
   }
   .footer-section {
-    margin-top: 50px;
+    margin-top: 150px;
   }
   .footer-logo > a > img {
     max-width: 150px;
@@ -1315,7 +1382,7 @@ input {
     min-height: 45px;
   }
   .nav-btn > a {
-    padding: 12px 18px;
+    padding: 12px 25px;
     font-size: 12px;
   }
   ul {
@@ -1344,7 +1411,7 @@ input {
   }
   .banner-img > .small-banner-scr {
     display: block;
-    max-width: 340px;
+    max-width: 400px;
     min-height: 250px;
     object-fit: contain;
   }
@@ -1397,9 +1464,7 @@ input {
   .banner-logo > hr {
     display: none;
   }
-  .col-6{
-    width: 100%;
-  }
+
   /* Our Special Dishes Section */
   .special-section {
     padding-top: 20px;
@@ -1435,11 +1500,13 @@ input {
   .welcome-text > h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
   }
   .welcome-text > p {
     max-width: 275px;
     font-size: 12px;
     margin-bottom: 10px;
+    text-align: center;
   }
   .leaf2 {
     bottom: 40px;
@@ -1474,12 +1541,6 @@ input {
     gap: 15px;
     margin-bottom: 10px;
     justify-content: center;
-  }
-  .col-6th{
-    width: 100%;
-  }
-  .col-4th{
-    width: 100%;
   }
 
   /* Our Chef Section */
@@ -1569,13 +1630,16 @@ input {
     height: 69px;
     width: 69px;
   }
+  .review-section {
+    padding-bottom: 120px;
+  }
 
   /* Small Newsletter Section */
   .small-newsletter-section > div > div {
     justify-content: center;
     align-items: center;
   }
-  .newsletter-section {
+  .newsletter-box {
     display: none;
   }
   .small-newsletter-section {
@@ -1583,7 +1647,6 @@ input {
   }
   .small-newsletter-box {
     background: url(../assets/Maskgroup\(13\).png) center/cover no-repeat;
-    max-width: 400px;
     min-height: 200px;
     display: flex;
     justify-content: center;
@@ -1591,7 +1654,12 @@ input {
     flex-direction: column;
     border-radius: 20px;
     padding: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: calc(-200px / 2);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .small-newsletter-box > h2 {
     font-size: 20px;
@@ -1603,8 +1671,8 @@ input {
     padding: 10px 12px;
     border: 2px solid white;
     background-color: white;
-    border-radius: 10px;
-    width: 240px;
+    border-radius: 5px;
+    width: 265px;
   }
   .email1 > input {
     border: none;
@@ -1617,6 +1685,7 @@ input {
     color: white;
     border-radius: 10px;
     margin-top: 20px;
+    font-size: 12px;
   }
 
   /* Footer Section */
@@ -1625,7 +1694,7 @@ input {
     flex-direction: column;
   }
   .footer-section {
-    margin-top: 30px;
+    margin-top: 80px;
   }
   .footer-hr-img {
     display: none;
