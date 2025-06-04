@@ -27,7 +27,7 @@ body {
   margin: 0 -15px;
 }
 .row > * {
-  padding: 0, 15px;
+  padding: 0 15px;
 }
 a {
   display: inline-block;
@@ -270,45 +270,93 @@ ul > li > a {
   top: -65px;
 }
 
-/* Dish with price Section */
-.dish-with-price-section {
+/* Dish with price Section*/
+.dish-price-section {
+  padding: 100px 0;
   background-color: whitesmoke;
-  padding-bottom: 150px;
 }
-.col-3 {
+.dish-price-section > div > div {
+  row-gap: 100px;
+}
+.col {
   width: 25%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.dish-img2 > img,
-.dish-img3 > img,
-.dish-img4 > img {
+.manu-card,
+.manu-card-4,
+.manu-card1 {
   max-width: 265px;
-  min-height: 410px;
-  object-fit: contain;
-}
-.dish-img1 > img {
-  max-width: 309px;
-  min-height: 440px;
-  object-fit: contain;
-}
-.dish-img4 {
+  min-height: 300px;
+  background-color: whitesmoke;
+  border: 4px solid white;
+  border-radius: 30px 0 30px 0;
+  padding: 20px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manu-card1 {
+  /* z-index: 99; */
+}
+.onion-img {
+  position: absolute;
+  bottom: -50px;
+  right: -42px;
+  z-index: 0;
 }
 .garlic-one {
   position: absolute;
-  bottom: -35px;
-  right: 190px;
+  bottom: -40px;
+  left: 20px;
 }
 .garlic-full {
   position: absolute;
-  bottom: -40px;
-  right: 20px;
+  bottom: -50px;
+  right: -20px;
 }
 .coriander-img {
   position: absolute;
-  right: 500px;
-  bottom: -200px;
+  right: 350px;
+  bottom: -160px;
+}
+.dish-img > img {
+  max-width: 200px;
+  min-height: 200px;
+  object-fit: contain;
+  position: absolute;
+  top: calc(-200px / 2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dish-price > img {
+  max-width: 70px;
+  min-height: 70px;
+  object-fit: contain;
+  position: absolute;
+  top: -20%;
+  right: 10px;
+}
+.dish-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 50px;
+}
+.dish-details {
+  max-width: 225px;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 16px;
+  align-self: flex-end;
+}
+.dish-heading {
+  font-size: 20px;
+  color: var(--primary-color);
 }
 
 /* Welcome Section  */
@@ -646,6 +694,10 @@ h4 {
   align-items: center;
 }
 .newsletter-box {
+  /* position: absolute;
+  top: calc(-400px / 2);
+  left: 50%;
+  transform: translateX(-50%); */
   width: 1150px;
   min-height: 400px;
   display: flex;
@@ -816,6 +868,14 @@ input {
     max-width: 350px;
     object-fit: contain;
   }
+
+  /* Dish with price Section */
+  .dish-price-section > div > div {
+    row-gap: 100px;
+  }
+  .col {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1024px) {
   /* Header Section */
@@ -891,30 +951,6 @@ input {
   .banner-right-top,
   .banner-right-bottom {
     display: none;
-  }
-
-  /* Dish with price Section */
-  .dish-with-price-section {
-    background-color: whitesmoke;
-    padding-bottom: 100px;
-  }
-  .dish-with-price-section > div > div {
-    flex-wrap: wrap;
-  }
-  .col-3 {
-    padding: 0 10px;
-  }
-  .dish-img2 > img,
-  .dish-img3 > img,
-  .dish-img4 > img {
-    max-width: 250px;
-    min-height: 310px;
-    object-fit: contain;
-  }
-  .dish-img1 > img {
-    max-width: 255px;
-    min-height: 340px;
-    object-fit: contain;
   }
 
   /* Welcome Section */
@@ -1100,23 +1136,20 @@ input {
     font-size: 16px;
     text-align: center;
   }
+  .special-section-text-img1,
+  .special-section-text-img2 {
+    display: none;
+  }
 
   /* Dish with price Section */
-  .dish-with-price-section {
-    background-color: whitesmoke;
-    padding-bottom: 0px;
+  .dish-price-section {
+    padding-bottom: 50px;
   }
-  .dish-img2 > img,
-  .dish-img3 > img,
-  .dish-img4 > img {
-    max-width: 150px;
-    min-height: 210px;
-    object-fit: contain;
-  }
-  .dish-img1 > img {
-    max-width: 145px;
-    min-height: 240px;
-    object-fit: contain;
+  .onion-img,
+  .garlic-one,
+  .garlic-full,
+  .coriander-img {
+    display: none;
   }
 
   /* Welcome Section */
@@ -1143,6 +1176,12 @@ input {
   .leaf2 {
     bottom: 40px;
     left: 130px;
+  }
+  .garlic-img1,
+  .garlic-img2,
+  .leaf4,
+  .leaf5 {
+    display: none;
   }
 
   /* Our Chef Section */
@@ -1238,6 +1277,9 @@ input {
   .footer-left > p {
     max-width: 350px;
   }
+  .footer-hr-img {
+    display: none;
+  }
 
   /* Footer Hr Section */
   .footer-hr-section > div > hr {
@@ -1249,6 +1291,18 @@ input {
     padding: 10px;
     gap: 100px;
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* Dish with price Section */
+  .dish-price-section > div > div {
+    row-gap: 100px;
+  }
+  .col {
+    width: 100%;
+  }
+  .dish-price-section {
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1290,7 +1344,7 @@ input {
   }
   .banner-img > .small-banner-scr {
     display: block;
-    max-width: 300px;
+    max-width: 340px;
     min-height: 250px;
     object-fit: contain;
   }
@@ -1321,6 +1375,7 @@ input {
     display: flex;
     gap: 12px;
     align-items: center;
+    justify-content: center;
   }
   .link1 {
     display: flex;
@@ -1339,7 +1394,12 @@ input {
     min-height: 45px;
     object-fit: contain;
   }
-
+  .banner-logo > hr {
+    display: none;
+  }
+  .col-6{
+    width: 100%;
+  }
   /* Our Special Dishes Section */
   .special-section {
     padding-top: 20px;
@@ -1355,26 +1415,8 @@ input {
   }
 
   /* Dish with price Section */
-  .dish-with-price-section {
-    background-color: whitesmoke;
-    padding-bottom: 0px;
-  }
-  .dish-with-price-section > div > div {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .dish-img2 > img,
-  .dish-img3 > img,
-  .dish-img4 > img {
-    max-width: 180px;
-    min-height: 210px;
-    object-fit: contain;
-  }
-  .dish-img1 > img {
-    max-width: 185px;
-    min-height: 240px;
-    object-fit: contain;
+  .dish-price-section {
+    padding-bottom: 10px;
   }
 
   /* Welcome Section */
@@ -1383,7 +1425,7 @@ input {
   }
   .welcome-img > img {
     min-height: 260px;
-    max-width: 250px;
+    max-width: 275px;
   }
   .welcome-section > div > div {
     padding-bottom: 10px;
@@ -1433,6 +1475,12 @@ input {
     margin-bottom: 10px;
     justify-content: center;
   }
+  .col-6th{
+    width: 100%;
+  }
+  .col-4th{
+    width: 100%;
+  }
 
   /* Our Chef Section */
   .chef-img > img {
@@ -1449,10 +1497,11 @@ input {
   .chef-text > p {
     font-size: 12px;
     margin-bottom: 10px;
+    max-width: 400px;
   }
   .chef-list > ul > li > img {
-    max-width: 10px;
-    min-height: 10px;
+    max-width: 15px;
+    min-height: 15px;
   }
   .chef-list {
     gap: 12px;
