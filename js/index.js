@@ -6,3 +6,4 @@ list.addEventListener("click", ()=>{
     console.log(navRight.classList);
     navRight.classList.toggle("active");
 });
+

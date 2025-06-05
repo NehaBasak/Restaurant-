@@ -405,15 +405,6 @@ ul > li > a {
   max-width: 650px;
   min-height: 660px;
   object-fit: contain;
-  animation: weldish 1s 1 linear forwards;
-}
-@keyframes weldish{
-  from{
-    transform: translateX(-300px);
-  }
-  to{
-    transform: translateX(0);
-  }
 }
 .welcome-section > div > div {
   align-items: center;
@@ -437,19 +428,16 @@ ul > li > a {
   max-width: 190px;
   min-height: 125px;
   object-fit: contain;
-  animation: weldish 1s 1 linear forwards;
 }
 .leaf2 > img {
   max-width: 200px;
   min-height: 130px;
   object-fit: contain;
-  animation: weldish 1s 1 linear forwards;
 }
 .leaf1 > img {
   max-width: 90px;
   min-height: 185px;
   object-fit: contain;
-  animation: weldish 1s 1 linear forwards;
 }
 .welcome-img {
   position: relative;
@@ -524,15 +512,6 @@ ul > li > a {
   max-width: 500px;
   min-height: 695px;
   object-fit: contain;
-  animation: chef 1s 1 linear forwards;
-}
-@keyframes chef{
-  from{
-    transform: translateX(300px);
-  }
-  to{
-    transform: translateX(0);
-  }
 }
 .chef-img {
   display: flex;
