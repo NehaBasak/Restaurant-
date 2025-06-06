@@ -1393,7 +1393,6 @@ input {
   .banner-section {
     margin-bottom: 10px;
     text-align: center;
-    min-height: 80vh;
   }
   .banner-img > .small-banner-scr {
     display: block;
