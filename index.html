@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="./assets/restaurant-icon-logo-vector-design-template_827767-5061.avif" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/restaurant-icon-logo-vector-design-template_827767-5061.avif"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -123,6 +127,83 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Small-Slider Section -->
+    <section class="small-slider-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="manu-card1">
+              <div class="small-dish-img">
+                <img src="./assets/dish-1 1 (1).png" alt="" />
+                <div class="dish-price">
+                  <img src="./assets/Price (2).png" alt="" />
+                </div>
+              </div>
+              <div class="small-dish-name">
+                <div class="dish-heading"><h4>Lumpia with Suace</h4></div>
+                <div class="dish-details">
+                  Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                  eiusmod tempor
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="manu-card">
+              <div class="small-dish-img">
+                <img src="./assets/dish-3 1 (1).png" alt="" />
+                <div class="dish-price">
+                  <img src="./assets/Price (2).png" alt="" />
+                </div>
+              </div>
+              <div class="small-dish-name">
+                <div class="dish-heading"><h4>Fish and Veggie</h4></div>
+                <div class="dish-details">
+                  Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                  eiusmod tempor
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="manu-card">
+              <div class="small-dish-img">
+                <img src="./assets/dish-4 (2).png" alt="" />
+                <div class="dish-price">
+                  <img src="./assets/Price (2).png" alt="" />
+                </div>
+              </div>
+              <div class="small-dish-name">
+                <div class="dish-heading"><h4>Tofu Chili</h4></div>
+                <div class="dish-details">
+                  Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                  eiusmod tempor
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="manu-card-4">
+              <div class="small-dish-img">
+                <img src="./assets/dish-5 (1).png" alt="" />
+                <div class="dish-price">
+                  <img src="./assets/Price (2).png" alt="" />
+                </div>
+              </div>
+              <div class="small-dish-name">
+                <div class="dish-heading"><h4>Egg and Cocumber</h4></div>
+                <div class="dish-details">
+                  Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                  eiusmod tempor
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -549,26 +630,20 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Footer Hr Section -->
-    <section class="footer-hr-section">
       <div class="container">
         <hr />
       </div>
-    </section>
-
-    <!-- Footer last Section -->
-    <section class="footer-last-section">
       <div class="container">
         <div class="row">
-          <div class="footer-last-part1">
-            <div><img src="./assets/Group (17).png" alt="" /></div>
-            <div>2022 Restaurants. All Right Reserved. Designed by Isaac</div>
-          </div>
-          <div class="footer-last-part2">
-            <div>Terms of Service</div>
-            <div>Privacy Policy</div>
+          <div class="footer-last">
+            <div class="footer-last-part1">
+              <div><img src="./assets/Group (17).png" alt="" /></div>
+              <div>2022 Restaurants. All Right Reserved. Designed by Isaac</div>
+            </div>
+            <div class="footer-last-part2">
+              <div>Terms of Service</div>
+              <div>Privacy Policy</div>
+            </div>
           </div>
         </div>
       </div>
@@ -590,6 +665,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
   </body>
 </html>

@@ -96,7 +96,7 @@ ul > li > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 .banner-section > div {
   position: relative;
@@ -112,11 +112,11 @@ ul > li > a {
   object-fit: contain;
   animation: bannerimg 2s 1 linear forwards;
 }
-@keyframes bannerimg{
-    from{
+@keyframes bannerimg {
+  from {
     transform: translatex(300px);
   }
-  to{
+  to {
     transform: translateX(0);
   }
 }
@@ -128,11 +128,11 @@ ul > li > a {
   animation: heading 2s 1 linear forwards;
 }
 @keyframes heading {
-  from{
+  from {
     transform: translateX(-300px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
@@ -213,10 +213,10 @@ ul > li > a {
   animation: bannerdish 500ms 1 linear forwards;
 }
 @keyframes bannerdish {
-  from{
+  from {
     transform: translateY(50px);
   }
-  to{
+  to {
     transform: translateY(0);
   }
 }
@@ -297,6 +297,11 @@ ul > li > a {
   position: absolute;
   right: -155px;
   top: -65px;
+}
+
+/* Small-Slider Section  */
+.small-slider-section {
+  display: none;
 }
 
 /* Dish with price Section*/
@@ -770,7 +775,6 @@ input {
 /* Footer Section */
 .footer-section > div > div {
   display: flex;
-  justify-content: center;
 }
 .footer-section {
   margin-top: 250px;
@@ -851,23 +855,19 @@ input {
   min-height: 45px;
   object-fit: contain;
 }
-
-/* Footer Hr Section */
-.footer-hr-section > div {
+.footer-section > div > hr {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footer-hr-section > div > hr {
-  width: 1150px;
+  max-width: 1050px;
   color: var(--secondary-color);
   margin: 45px 0;
 }
-
-/* Footer last Section */
-.footer-last-section > div > div {
+.footer-section > div > div > .footer-last {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  text-wrap: nowrap;
   gap: 400px;
 }
 .footer-last-part2 {
@@ -916,14 +916,14 @@ input {
     animation: dropdown 500ms forwards 1 linear;
   }
   @keyframes dropdown {
-   from{
-    transform: translateY(-30px);
-    opacity: 0;
-   }
-   to{
-    transform: translate(0);
-    opacity: 1;
-   }
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0);
+      opacity: 1;
+    }
   }
   .nav-logo {
     padding: 10px;
@@ -1071,9 +1071,15 @@ input {
     padding: 11px 15px;
   }
 
-  /* Footer last Section */
-  .footer-last-section > div > div {
-    padding: 10px;
+  /* Footer Section */
+  .footer-section > div > div {
+    gap: 60px;
+  }
+  .footer-section > div > hr {
+    margin: 35px 0;
+    max-width: 1000px;
+  }
+  .footer-section > div > div > .footer-last {
     gap: 300px;
   }
 }
@@ -1092,7 +1098,7 @@ input {
     flex-direction: column-reverse;
   }
   .banner-section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     min-height: 90vh;
   }
   .banner-left-top,
@@ -1320,23 +1326,24 @@ input {
     min-height: 45px;
     margin-bottom: 10px;
   }
+  .footer-right {
+    gap: 50px;
+  }
   .footer-left > p {
     max-width: 350px;
   }
   .footer-hr-img {
     display: none;
   }
-
-  /* Footer Hr Section */
-  .footer-hr-section > div > hr {
-    margin: 25px 0;
+  .footer-section > div > div {
+    gap: 40px;
   }
-
-  /* Footer last Section */
-  .footer-last-section > div > div {
-    padding: 10px;
-    gap: 100px;
-    flex-wrap: wrap;
+  .footer-section > div > hr {
+    margin: 25px 0;
+    max-width: 1000px;
+  }
+  .footer-section > div > div > .footer-last {
+    gap: 50px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1460,7 +1467,123 @@ input {
 
   /* Dish with price Section */
   .dish-price-section {
-    padding-bottom: 10px;
+    display: none;
+  }
+
+  /* Small-Slider-Section */
+  .small-slider-section {
+    background: whitesmoke;
+    padding: 10px 0;
+    display: block;
+  }
+  .swiper-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    height: 80%;
+  }
+  .swiper {
+    width: 100%;
+    height: 500px !important;
+    overflow: hidden;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .dish-price-section {
+    padding: 100px 0;
+    background-color: whitesmoke;
+  }
+  .dish-price-section > div > div {
+    row-gap: 100px;
+  }
+  .col {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .manu-card,
+  .manu-card-4,
+  .manu-card1 {
+    max-width: 250px;
+    min-height: 200px;
+    background-color: whitesmoke;
+    border: 4px solid white;
+    border-radius: 30px 0 30px 0;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .onion-img {
+    position: absolute;
+    bottom: -50px;
+    right: -42px;
+    z-index: 0;
+  }
+  .garlic-one {
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+  }
+  .garlic-full {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+  }
+  .coriander-img {
+    position: absolute;
+    right: 350px;
+    bottom: -160px;
+  }
+  .small-dish-img> img {
+    max-width: 150px;
+    min-height: 150px;
+    object-fit: contain;
+    position: absolute;
+    top: calc(-150px / 2);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .dish-price > img {
+    max-width: 50px;
+    min-height: 50px;
+    object-fit: contain;
+    position: absolute;
+    top: -40%;
+    right: 18px;
+  }
+  .small-dish-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 100px;
+  }
+  .small-dish-name>.dish-details {
+    max-width: 225px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 16px;
+    align-self: flex-end;
+  }
+  .small-dish-name>.dish-heading {
+    font-size: 20px;
+    color: var(--primary-color);
   }
 
   /* Welcome Section */
@@ -1738,28 +1861,29 @@ input {
     min-height: 30px;
     object-fit: contain;
   }
-
-  /* Footer Hr Section */
-  .footer-hr-section > div > hr {
-    margin: 12px 0;
+  .footer-section > div > hr {
+    margin: 15px 0;
+    max-width: 1000px;
   }
-
-  /* Footer last Section */
-  .footer-last-section > div > div {
+  .footer-section > div > div > .footer-last {
+    gap: 20px;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
   }
   .footer-last-part2 {
     display: flex;
     gap: 10px;
+    font-size: 12px;
   }
   .footer-last-part1 {
     display: flex;
-    gap: 5px;
-    max-width: 250px;
+    max-width: 100px;
     justify-content: center;
+    gap: 1;
     padding-left: 18px;
+    font-size: 12px;
+  }
+  .footer-last-part1 > div {
+    text-align: center;
   }
 }
