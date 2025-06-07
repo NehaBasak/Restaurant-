@@ -1531,27 +1531,6 @@ input {
     align-items: center;
     margin: 0 auto;
   }
-  .onion-img {
-    position: absolute;
-    bottom: -50px;
-    right: -42px;
-    z-index: 0;
-  }
-  .garlic-one {
-    position: absolute;
-    bottom: -40px;
-    left: 20px;
-  }
-  .garlic-full {
-    position: absolute;
-    bottom: -50px;
-    right: -20px;
-  }
-  .coriander-img {
-    position: absolute;
-    right: 350px;
-    bottom: -160px;
-  }
   .small-dish-img> img {
     max-width: 150px;
     min-height: 150px;
