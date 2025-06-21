@@ -8,6 +8,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 /* Common Section */
 :root {
@@ -856,9 +857,6 @@ input {
   object-fit: contain;
 }
 .footer-section > div > hr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 1050px;
   color: var(--secondary-color);
   margin: 45px 0;
@@ -1364,11 +1362,11 @@ input {
 @media screen and (max-width: 425px) {
   /* Header Section */
   .dash {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .nav-logo {
-    max-width: 120px;
-    min-height: 45px;
+    max-width: 150px;
+    min-height: 55px;
   }
   .nav-btn > a {
     padding: 12px 25px;
